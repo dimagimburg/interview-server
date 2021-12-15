@@ -5,7 +5,7 @@ This server is used for FE interview
 node server.js
 
 ## Example
-Go to url: `http://localhost:5000`
+Go to url: `http://localhost:5000/vehicles`
 
 Response example:
 ```
