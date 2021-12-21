@@ -6,7 +6,11 @@ function getRandomArbitrary(min, max) {
 
 var server = http.createServer(function (req, res) {
     if (req.url == '/vehicles') {
-        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.writeHead(200, {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin' : '*',
+            'Access-Control-Allow-Methods': 'GET'
+        });
         res.write(JSON.stringify({
             available: getRandomArbitrary(1, 100),
             regular: getRandomArbitrary(1, 100),
